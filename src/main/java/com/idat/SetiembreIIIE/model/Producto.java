@@ -6,7 +6,7 @@ public class Producto {
 	private String nombreProducto;
 	private String descripcion;
 	private Double precio;
-	private Integer stock;
+	private Integer stock; 
 	
 	public Integer getIdProducto() {
 		return idProducto;
