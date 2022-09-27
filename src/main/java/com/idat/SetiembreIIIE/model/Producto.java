@@ -8,6 +8,7 @@ public class Producto {
 	private Double precio;
 	private Integer stock; 
 	
+	
 	public Integer getIdProducto() {
 		return idProducto;
 	}
