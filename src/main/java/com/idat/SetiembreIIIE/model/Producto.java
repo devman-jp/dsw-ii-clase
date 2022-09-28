@@ -3,7 +3,7 @@ package com.idat.SetiembreIIIE.model;
 public class Producto {
 
 	private Integer idProducto;
-	private String nombreProducto;
+	private String nombreProducto ;
 	private String descripcion;
 	private Double precio;
 	private Integer stock; 
