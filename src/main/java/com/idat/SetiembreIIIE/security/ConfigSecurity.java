@@ -28,12 +28,6 @@ public class ConfigSecurity extends WebSecurityConfigurerAdapter{
 
 	@Autowired
 	private UserDetailService service;
-	
-	@Autowired
-	private TokenFilter filter;
-	
-	@Autowired
-	private EntryPoint entrypoint;
 
 	@Override
 	public AuthenticationManager authenticationManagerBean() throws Exception {
@@ -64,19 +58,19 @@ public class ConfigSecurity extends WebSecurityConfigurerAdapter{
 //			.and()
 //			.csrf().disable();
 		
-		http.authorizeRequests()
-			.antMatchers("/crearToken").permitAll()
-			.anyRequest()
-			.authenticated()
-			.and()
-			.exceptionHandling()
-			.authenticationEntryPoint(entrypoint)
-			.and()
-			.sessionManagement()
-			.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-			.and()
-			.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
-			.csrf().disable();
+//		http.authorizeRequests()
+//			.antMatchers("/crearToken").permitAll()
+//			.anyRequest()
+//			.authenticated()
+//			.and()
+//			.exceptionHandling()
+//			.authenticationEntryPoint(entrypoint)
+//			.and()
+//			.sessionManagement()
+//			.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//			.and()
+//			.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
+//			.csrf().disable();
 		
 	}
 
